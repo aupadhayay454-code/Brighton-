@@ -1,0 +1,218 @@
+
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    <meta name="theme-color" content="#059669" />
+    <meta name="description" content="Brighton Career Consultants - Study Abroad, IELTS/PTE, and Visa Counseling" />
+    
+    <!-- Android/PWA Specific Meta Tags -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="Brighton">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Brighton">
+    
+    <!-- Performance Optimizations -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Barlow+Condensed:wght@400;500;600;700&display=swap" as="style">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Barlow+Condensed:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://cdn.tailwindcss.com">
+    
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="apple-touch-icon" href="https://cdn-icons-png.flaticon.com/512/2913/2913520.png" />
+    <title>Brighton Career Consultants</title>
+    
+    <!-- Tailwind CDN with Configuration -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+              condensed: ['"Barlow Condensed"', 'sans-serif'],
+            },
+            fontSize: {
+              'xxs': '10px',
+            },
+            colors: {
+              primary: {
+                50: 'rgb(var(--primary-50) / <alpha-value>)',
+                100: 'rgb(var(--primary-100) / <alpha-value>)',
+                200: 'rgb(var(--primary-200) / <alpha-value>)',
+                300: 'rgb(var(--primary-300) / <alpha-value>)',
+                400: 'rgb(var(--primary-400) / <alpha-value>)',
+                500: 'rgb(var(--primary-500) / <alpha-value>)',
+                600: 'rgb(var(--primary-600) / <alpha-value>)',
+                700: 'rgb(var(--primary-700) / <alpha-value>)',
+                800: 'rgb(var(--primary-800) / <alpha-value>)',
+                900: 'rgb(var(--primary-900) / <alpha-value>)',
+                950: 'rgb(var(--primary-950) / <alpha-value>)',
+              }
+            },
+            animation: {
+              'slideUp': 'slideUp 0.6s cubic-bezier(0.16, 1, 0.3, 1)',
+              'slideDown': 'slideDown 0.6s cubic-bezier(0.16, 1, 0.3, 1)',
+              'fadeIn': 'fadeIn 0.6s ease-out',
+              'pop': 'pop 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275)',
+              'blob': 'blob 10s infinite',
+              'float': 'float 6s ease-in-out infinite',
+            },
+            keyframes: {
+              slideUp: {
+                '0%': { transform: 'translateY(40px)', opacity: '0' },
+                '100%': { transform: 'translateY(0)', opacity: '1' },
+              },
+              slideDown: {
+                '0%': { transform: 'translateY(-40px)', opacity: '0' },
+                '100%': { transform: 'translateY(0)', opacity: '1' },
+              },
+              fadeIn: {
+                '0%': { opacity: '0' },
+                '100%': { opacity: '1' },
+              },
+              pop: {
+                '0%': { transform: 'scale(0.95)', opacity: '0' },
+                '40%': { transform: 'scale(1.02)' },
+                '100%': { transform: 'scale(1)', opacity: '1' },
+              },
+              blob: {
+                '0%': { transform: 'translate(0px, 0px) scale(1)' },
+                '33%': { transform: 'translate(30px, -50px) scale(1.1)' },
+                '66%': { transform: 'translate(-20px, 20px) scale(0.9)' },
+                '100%': { transform: 'translate(0px, 0px) scale(1)' },
+              },
+              float: {
+                '0%, 100%': { transform: 'translateY(0)' },
+                '50%': { transform: 'translateY(-10px)' },
+              }
+            }
+          }
+        }
+      }
+    </script>
+    
+    <style>
+      :root {
+        /* Deep Emerald Green Palette - Clean & Professional */
+        --primary-50: 236 253 245;
+        --primary-100: 209 250 229;
+        --primary-200: 167 243 208;
+        --primary-300: 110 231 183;
+        --primary-400: 52 211 153;
+        --primary-500: 16 185 129;
+        --primary-600: 5 150 105;
+        --primary-700: 4 120 87;
+        --primary-800: 6 95 70;
+        --primary-900: 6 78 59;
+        --primary-950: 2 44 34;
+      }
+
+      body {
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        background-color: #f8fafc; /* Slightly blue-ish gray for iOS feel */
+        -webkit-tap-highlight-color: transparent;
+        -webkit-overflow-scrolling: touch;
+        overscroll-behavior-y: none;
+        text-rendering: optimizeLegibility;
+      }
+      
+      body.dark {
+        background-color: #020617; /* Slate 950 */
+      }
+      
+      body.density-compact {
+        font-family: 'Barlow Condensed', sans-serif;
+      }
+
+      /* Clean Selection Styles */
+      ::selection {
+        background-color: rgba(16, 185, 129, 0.2);
+        color: #065f46;
+      }
+
+      input, select, textarea {
+        font-size: 16px !important;
+        max-width: 100%;
+      }
+      
+      /* Hidden Scrollbar for cleaner app-like feel */
+      ::-webkit-scrollbar {
+        display: none;
+      }
+      * {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+      
+      button, a, .nav-item {
+        user-select: none;
+        -webkit-user-select: none;
+        cursor: pointer;
+      }
+
+      /* iOS Liquid Glass Utilities */
+      .glass {
+        background: rgba(255, 255, 255, 0.75);
+        backdrop-filter: blur(20px) saturate(180%);
+        -webkit-backdrop-filter: blur(20px) saturate(180%);
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.07);
+      }
+      
+      .dark .glass {
+        background: rgba(15, 23, 42, 0.65);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+      }
+
+      .glass-panel {
+        background: rgba(255, 255, 255, 0.6);
+        backdrop-filter: blur(12px) saturate(160%);
+        -webkit-backdrop-filter: blur(12px) saturate(160%);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+      }
+      
+      .dark .glass-panel {
+        background: rgba(17, 24, 39, 0.6);
+        border: 1px solid rgba(255, 255, 255, 0.05);
+      }
+      
+      .ios-btn {
+        transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      .ios-btn:active {
+        transform: scale(0.95);
+        opacity: 0.9;
+      }
+      
+      .mask-fade-sides {
+        mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+        -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "vite": "https://aistudiocdn.com/vite@^7.2.4",
+    "@vitejs/plugin-react": "https://aistudiocdn.com/@vitejs/plugin-react@^5.1.1",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.30.0",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.554.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "path": "https://aistudiocdn.com/path@^0.12.7",
+    "url": "https://aistudiocdn.com/url@^0.11.4"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/index.tsx"></script>
+  </body>
+</html>
