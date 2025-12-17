@@ -1,6 +1,6 @@
 import React, { useState, useEffect, Suspense, ReactNode, ErrorInfo } from 'react';
 import { ViewState, ThemeColor } from './types';
-import { Home, MapPin, BookOpen, Phone, FileText, Menu, X, Bell, CalendarCheck, Globe, PenTool, GraduationCap, Download, Settings, Check, Calendar, AlertTriangle, RefreshCw, Maximize2, Minimize2 } from 'lucide-react';
+import { Home, MapPin, BookOpen, Phone, FileText, Menu, X, Bell, CalendarCheck, Globe, PenTool, GraduationCap, Download, Settings, RefreshCw, Maximize2, Minimize2, Compass, AlertTriangle } from 'lucide-react';
 import HomePage from './components/HomePage';
 import ChatWidget from './components/ChatWidget';
 
@@ -13,6 +13,7 @@ const NotificationsPage = React.lazy(() => import('./components/NotificationsPag
 const ResourcesPage = React.lazy(() => import('./components/ResourcesPage'));
 const UKInterviewPage = React.lazy(() => import('./components/UKInterviewPage'));
 const NepaliCalendarPage = React.lazy(() => import('./components/NepaliCalendarPage'));
+const AustraliaCounsellingPage = React.lazy(() => import('./components/AustraliaCounsellingPage'));
 
 const COLOR_PALETTES: Record<ThemeColor, any> = {
   green: {
@@ -51,7 +52,10 @@ interface ErrorBoundaryState {
 }
 
 class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundaryState> {
-  public state: ErrorBoundaryState = { hasError: false };
+  constructor(props: ErrorBoundaryProps) {
+    super(props);
+    this.state = { hasError: false };
+  }
 
   static getDerivedStateFromError(error: any) {
     return { hasError: true };
@@ -211,6 +215,7 @@ const App: React.FC = () => {
       case ViewState.RESOURCES: return <ResourcesPage />;
       case ViewState.UK_INTERVIEW: return <UKInterviewPage />;
       case ViewState.NEPALI_CALENDAR: return <NepaliCalendarPage />;
+      case ViewState.AUSTRALIA_COUNSELLING: return <AustraliaCounsellingPage />;
       default: return <HomePage setView={setCurrentView} density={density} />;
     }
   };
@@ -249,8 +254,8 @@ const App: React.FC = () => {
 
               <nav className="hidden md:flex items-center space-x-1.5">
                 <NavItem view={ViewState.HOME} icon={Home} label="Home" active={currentView === ViewState.HOME} onClick={() => setCurrentView(ViewState.HOME)} />
-                <NavItem view={ViewState.ABOUT} icon={BookOpen} label="About" active={currentView === ViewState.ABOUT} onClick={() => setCurrentView(ViewState.ABOUT)} />
                 <NavItem view={ViewState.DESTINATIONS} icon={Globe} label="Abroad" active={currentView === ViewState.DESTINATIONS} onClick={() => setCurrentView(ViewState.DESTINATIONS)} />
+                <NavItem view={ViewState.AUSTRALIA_COUNSELLING} icon={Compass} label="Aus Guide" active={currentView === ViewState.AUSTRALIA_COUNSELLING} onClick={() => setCurrentView(ViewState.AUSTRALIA_COUNSELLING)} />
                 <NavItem view={ViewState.UK_INTERVIEW} icon={Settings} label="Prep" active={currentView === ViewState.UK_INTERVIEW} onClick={() => setCurrentView(ViewState.UK_INTERVIEW)} />
                 <NavItem view={ViewState.CONTACT} icon={Phone} label="Contact" active={currentView === ViewState.CONTACT} onClick={() => setCurrentView(ViewState.CONTACT)} />
               </nav>
@@ -360,7 +365,7 @@ const App: React.FC = () => {
             {[
                 { view: ViewState.HOME, icon: Home },
                 { view: ViewState.DESTINATIONS, icon: Globe },
-                { view: ViewState.BOOKING, icon: CalendarCheck },
+                { view: ViewState.AUSTRALIA_COUNSELLING, icon: Compass },
                 { view: ViewState.UK_INTERVIEW, icon: GraduationCap },
             ].map((item) => (
                 <button
@@ -393,6 +398,7 @@ const App: React.FC = () => {
                         {[
                             { view: ViewState.ABOUT, icon: BookOpen, label: "About" },
                             { view: ViewState.CONTACT, icon: Phone, label: "Contact" },
+                            { view: ViewState.BOOKING, icon: CalendarCheck, label: "Booking" },
                             { view: ViewState.MOCK_TEST, icon: PenTool, label: "Tests" },
                             { view: ViewState.RESOURCES, icon: FileText, label: "Links" },
                             { view: ViewState.NEPALI_CALENDAR, icon: Calendar, label: "Calendar" },

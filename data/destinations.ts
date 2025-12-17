@@ -36,53 +36,107 @@ export const ukProcessSteps = [
 
 export const australiaProcessSteps = [
   {
-    title: "1. For Offer Letter",
+    title: "1. Intake & Eligibility Assessment",
     docs: [
-      "All Academics Documents (min 2.60 GPA)",
-      "Passport",
-      "(IELTS/PTE)",
-      "Internship or Work Experience with Bank Statement and TDS",
-      "Company ID Card / PAN Card (if gap)",
-      "Married Certificate (if married)",
-      "Dependent: Academic, Passport, Work Experience"
+      "Academic history check (grades, backlogs)",
+      "Gap analysis & work experience verification",
+      "English proficiency assessment (IELTS/PTE)",
+      "Financial background screening",
+      "Risk tier classification (Low/Medium/High)"
     ],
-    action: "Initial Documentation"
+    action: "Assess Eligibility"
   },
   {
-    title: "2. GTE - Income Documents",
+    title: "2. Australian Education System Orientation",
     docs: [
-      "Salary: Min 1 year TDS, Salary Certificate, 1 year Bank Statement, Company ID, Personal PAN, Job appointment letter",
-      "Pension: Pension Book, 1 year pension statement",
-      "Business: PAN Card, Registration, Income tax returns (3 yrs), Itemized bank statements (12 months)",
-      "Foreign Salary: Certificate, Passport, Bank Statement/Pay Slip, Visa Letter, Contract"
+      "Levels: Diploma, Bachelor, Master, PhD",
+      "Providers: Universities, TAFE, Private Colleges",
+      "Intakes: February, July (Primary), November (Limited)",
+      "Visa Subclass 500 overview",
+      "Work rights: 48 hours/fortnight (study), unlimited (breaks)"
     ],
-    action: "Proof of Income"
+    action: "Understand System"
   },
   {
-    title: "3. GTE - Assets & Other Income",
+    title: "3. Course & Career Mapping",
     docs: [
-      "Land Lease/House Rent: Ownership Certificate, Bank Statement (12 months), Tax receipts, Agreement, Tenant Citizenship/Photo",
-      "Agriculture Income: Income Tax return (3 yrs), Ward income documents",
-      "Vehicle Income: Photo, Blue book, Insurance, Income letter, Bank Statement, Tax payment"
+      "Aligning academic background to future career",
+      "Matching courses with ANZSCO occupations",
+      "Justification for Genuine Student (GS) requirement",
+      "Structuring logical study progression"
     ],
-    action: "Supporting Income"
+    action: "Plan Career"
   },
   {
-    title: "4. Ward & Relationship",
+    title: "4. Institution Shortlisting",
     docs: [
-      "Ward Relationship Certificate",
-      "Ward Birth Certificate",
-      "Ward Annual Income Verification"
+      "Selection based on entry requirements & budget",
+      "Risk assessment of institutions",
+      "Curating 3-5 best-fit options",
+      "Focus on graduate outcomes & location"
     ],
-    action: "Local Verification"
+    action: "Select Institutes"
   },
   {
-    title: "5. Funds (Financials)",
+    title: "5. Financial Planning",
     docs: [
-      "Bank Loan (A level Bank): Loan sanctioned letter, Mortgage deed, Engineering valuation, Loan disbursement & statements, Land ownership & tax receipts (3 yrs)",
-      "Land Sale: Ownership Documents (Seller/Buyer), Transfer deeds (with tax), Bank statement (sale to now), Land tax receipt (3 yrs)"
+      "Tuition: AUD 15,000–45,000/year estimates",
+      "Living Cost: AUD 29,710/year (DHA requirement)",
+      "OSHC (Health Cover) arrangements",
+      "Acceptable funds: Savings, Education Loan, Business Income"
     ],
-    action: "Financial Requirement"
+    action: "Arrange Finances"
+  },
+  {
+    title: "6. English Proficiency Strategy",
+    docs: [
+      "Diploma: IELTS 5.5–6.0",
+      "Bachelor: IELTS 6.0–6.5",
+      "Master: IELTS 6.5–7.0",
+      "Preparation for retakes if necessary",
+      "Packaging offers for English pathways"
+    ],
+    action: "English Requirements"
+  },
+  {
+    title: "7. Genuine Student (GS) Narrative",
+    docs: [
+      "Drafting specific Statement of Purpose (SOP)",
+      "Explaining 'Why Australia' & 'Why this Course'",
+      "Addressing gaps and immigration history",
+      "Evidence-based logic over emotion"
+    ],
+    action: "Write GS"
+  },
+  {
+    title: "8. Documentation Discipline",
+    docs: [
+      "Academic Transcripts & Certificates",
+      "Financial Documents (Bank statements, Tax clearance)",
+      "Identity Proofs (Passport, Citizenship)",
+      "Relationship certificates for sponsors"
+    ],
+    action: "Collect Documents"
+  },
+  {
+    title: "9. Application to Visa Workflow",
+    docs: [
+      "1. Application Lodgement -> Offer Letter",
+      "2. GTE/GS Check -> Fee Deposit",
+      "3. COE Issuance -> OSHC Arrangement",
+      "4. Visa Lodgement -> Biometrics & Medical"
+    ],
+    action: "Visa Process"
+  },
+  {
+    title: "10. Pre-Departure Briefing",
+    docs: [
+      "Understanding visa conditions & work rights",
+      "Academic integrity & attendance rules",
+      "Address update obligations",
+      "Financial survival plan for initial months"
+    ],
+    action: "Prepare Departure"
   }
 ];
 
@@ -414,7 +468,7 @@ export const destinations: Destination[] = [
   {
     id: 'australia',
     country: 'Australia',
-    image: 'https://images.unsplash.com/photo-1523482580672-f109ba8cb9be?auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?auto=format&fit=crop&w=800&q=80',
     details: 'World-class education, globally recognized qualifications, and excellent post-study work opportunities in a multicultural environment.',
     universities: [
       { 
@@ -794,3 +848,4 @@ export const destinations: Destination[] = [
     ]
   }
 ];
+    

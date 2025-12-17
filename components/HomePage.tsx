@@ -37,7 +37,7 @@ const testimonials: Testimonial[] = [
 
 const countryImages = [
     'https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?auto=format&fit=crop&w=800&q=80', // UK (London)
-    'https://images.unsplash.com/photo-1523482580672-f109ba8cb9be?auto=format&fit=crop&w=800&q=80', // Australia (Sydney Opera House)
+    'https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?auto=format&fit=crop&w=800&q=80', // Australia (Sydney Harbour)
     'https://images.unsplash.com/photo-1485738422979-f5c462d49f74?auto=format&fit=crop&w=800&q=80', // USA (NYC)
     'https://images.unsplash.com/photo-1517935706615-2717063c2225?auto=format&fit=crop&w=800&q=80', // Canada (Toronto)
     'https://images.unsplash.com/photo-1538485399081-7191377e8241?auto=format&fit=crop&w=800&q=80'  // Korea (Seoul)
@@ -251,3 +251,4 @@ const HomePage: React.FC<Props> = ({ setView, density = 'comfortable' }) => {
 };
 
 export default HomePage;
+    

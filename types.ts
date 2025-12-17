@@ -9,7 +9,8 @@ export enum ViewState {
   NOTIFICATIONS = 'NOTIFICATIONS',
   RESOURCES = 'RESOURCES',
   UK_INTERVIEW = 'UK_INTERVIEW',
-  NEPALI_CALENDAR = 'NEPALI_CALENDAR'
+  NEPALI_CALENDAR = 'NEPALI_CALENDAR',
+  AUSTRALIA_COUNSELLING = 'AUSTRALIA_COUNSELLING'
 }
 
 export type ThemeColor = 'green' | 'blue' | 'purple' | 'orange' | 'rose';
